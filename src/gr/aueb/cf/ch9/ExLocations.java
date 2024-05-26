@@ -16,14 +16,17 @@ public class ExLocations {
 
         try(Scanner in = new Scanner(inFd);
             PrintStream pw = new PrintStream(outFd, StandardCharsets.UTF_8)) {
+
+            in.nextLine(); //consumes first line and ignore
+
             while (in.hasNextLine()) {
                 line = in.nextLine();
-                tokens = line.split("  +"); //spaces
+                tokens = line.split(","); //read lines and split where commas
 
-                for (String token : tokens) {
-                    pw.printf("Location: %s", token); //form
-                    pw.flush();
-                }
+                pw.print("{location: '" + tokens[0] + "', latitude: "
+                        + tokens[1] + ", longitude: " + tokens[2] + " },");
+                pw.flush(); // creates the desired format using the columns from txt
+
                 pw.println();
             }
         }catch (IOException e) {
