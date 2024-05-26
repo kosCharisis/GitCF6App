@@ -33,7 +33,7 @@ public class gptlocations {
 
 
 
-            // Open a BufferedWriter to write to the output file
+            /// Open a BufferedWriter to write to the output file
             try (BufferedWriter writer = Files.newBufferedWriter(path)) {
                 // Process each of the other lines
                 for (int i = 1; i < lines.size(); i++) {
