@@ -28,6 +28,6 @@ public final class ImmutablePoint {
         return "ImmutablePoint{" +
                 "x=" + x +
                 ", y=" + y +
-                "}";
+                '}';
     }
 }

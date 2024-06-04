@@ -24,6 +24,9 @@ public final class ImmutablePoint3D {
 
     @Override
     public String toString() {
-        return super.toString();
+        return "ImmutablePoint3D{" +
+                "point=" + point +
+                ", z=" + z +
+                '}';
     }
 }
