@@ -45,6 +45,6 @@ public class Point3D extends Point2D{
     }
 
     public void sayHi () {
-        System.out.println("hello");
+        System.out.println("hello from P3");
     }
 }
