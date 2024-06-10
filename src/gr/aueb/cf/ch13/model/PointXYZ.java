@@ -45,22 +45,22 @@ public class PointXYZ {
 
     public String getXYDistance() {
         double distance = Math.hypot(x,y);
-        return "Distance in XY dimension, from center of axis " + "d = " + distance;
+        return "Distance in XY dimension, from center of axis d = " + distance;
     }
 
     public String getYZDistance() {
         double distance = Math.hypot(y,z);
-        return "Distance in YZ dimension, from center of axis " + "d = " + distance;
+        return "Distance in YZ dimension, from center of axis d = " + distance;
     }
 
     public String getXZDistance() {
         double distance = Math.hypot(x,z);
-        return "Distance in XZ dimension, from center of axis " + "d = " + distance;
+        return "Distance in XZ dimension, from center of axis d = " + distance;
     }
 
     public String getXYZDistance() {
         double distance = Math.sqrt( Math.pow(x,2) + Math.pow(y,2) + Math.pow(z,2));
-        return "Distance from center of axis " + "d = " + distance;
+        return "Distance from center of axis d = " + distance;
     }
 
 }

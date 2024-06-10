@@ -38,4 +38,10 @@ public class Point {
     protected void reset() {
         x = 0;
     }
+
+
+    public double getDistanceFromOrigin() {
+        return Math.sqrt(Math.pow(x,2));
+    }
+
 }
