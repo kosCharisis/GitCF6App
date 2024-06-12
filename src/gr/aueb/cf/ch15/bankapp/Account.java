@@ -18,14 +18,13 @@ public class Account extends IdentifiableEntity {
     public Account(String iban, User holder, double balance) {
         //super();
         this.iban = iban;
-        this.holder = holder;
+        this.holder = new User(holder);
         this.balance = balance;
     }
 
     public String getIban() {
         return iban;
     }
-
     public void setIban(String iban) {
         this.iban = iban;
     }
@@ -33,7 +32,6 @@ public class Account extends IdentifiableEntity {
     public User getHolder() {
         return new User(holder);
     }
-
     public void setHolder(User holder) {
         this.holder = new User(holder);
     }
@@ -41,7 +39,6 @@ public class Account extends IdentifiableEntity {
     public double getBalance() {
         return balance;
     }
-
     public void setBalance(double balance) {
         this.balance = balance;
     }
