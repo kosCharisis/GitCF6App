@@ -28,7 +28,7 @@ public class StackApp {
     }
 
     public static int pop() {
-        if (isFull()) {
+        if (isEmpty()) {
             System.out.println("Stack is empty");
             return -1; //will be solved with exceptions
         }
