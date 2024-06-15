@@ -7,8 +7,7 @@ import java.time.LocalDateTime;
 public class LoggerSingleton {
     private static final LoggerSingleton INSTANCE = new LoggerSingleton();
 
-    private LoggerSingleton() {
-    }
+    private LoggerSingleton() {}
 
      public static LoggerSingleton getInstance() {
         return INSTANCE;
