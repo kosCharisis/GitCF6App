@@ -1,7 +1,5 @@
 package gr.aueb.cf.ch16.secondexercise16;
 
-import gr.aueb.cf.ch16.firstexercise16.AbstractShape;
-
 public class Rectangle extends AbstractShape implements IRectangle {
     private final double width;
     private final double height;
