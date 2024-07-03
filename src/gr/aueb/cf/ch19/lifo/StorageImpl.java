@@ -3,11 +3,18 @@ package gr.aueb.cf.ch19.lifo;
 import java.util.ArrayDeque;
 import java.util.Deque;
 
+/**
+ * Delegation Design Pattern.
+ *
+ * @param <T>
+ */
 public class StorageImpl<T> implements IStorage<T> {
+    // Composition
     private final Deque<T> myStack;
 
+    // Forwarding
     public StorageImpl(int size) {
-        myStack = new ArrayDeque<>(size);
+        myStack = new ArrayDeque<>(size);  //LinkedList<>()
     }
 
     @Override
