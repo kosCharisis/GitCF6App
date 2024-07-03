@@ -38,8 +38,8 @@ public class GarageImpl implements IGarage {
     }
 
     @Override
-    public String[] toArray(String[] a) {
-        return storage.toArray(a);
+    public String[] getCars() {
+        return storage.toArray(new String[0]);
     }
 
     @Override
