@@ -3,12 +3,15 @@ package gr.aueb.cf.ch20.regex;
 public class Main {
 
     public static void main(String[] args) {
-        String s = "Red";
-        System.out.println(isRed(s));           // true
-        System.out.println(isRedOrGreen(s));    //true
-        System.out.println(isrRed(s));          //true
+//        String s = "Red";
+//        System.out.println(isRed(s));           // true
+//        System.out.println(isRedOrGreen(s));    //true
+//        System.out.println(isrRed(s));          //true
+//
+//        System.out.println(anySymbolAndDigit(" 4"));
 
-        System.out.println(anySymbolAndDigit(" 4"));
+        String s = regexSwap("Athanasios Androutsos");
+        System.out.println(s);
 
     }
 
@@ -61,10 +64,25 @@ public class Main {
     }
 
     public static boolean nestedSchema(String s) {
-        return s.matches("\\[*\\d+\\]*");
+        return s.matches("\\[*\\d+]*");
     }
 
     public static boolean isEmail(String s) {
         return s.matches("\\w+.?\\w*@\\w+.[a-z]{2,4}");
+    }
+
+    public static String[] regexSplit(String s) {
+        String [] tokens = s.split("\\s+");
+        return tokens;
+    }
+
+    public static String regexReplaceAll(String s) {
+        String strToReturn = s.replaceAll("\\s+", " ");
+        return strToReturn;
+    }
+
+    public static String regexSwap(String s) {
+        String strToReturn = s.replaceAll("(.*)\\s(.*)", "$2 $1");   // back-reference σε groups
+        return strToReturn;
     }
 }
