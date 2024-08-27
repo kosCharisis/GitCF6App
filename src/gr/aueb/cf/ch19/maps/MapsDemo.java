@@ -32,7 +32,7 @@ public class MapsDemo {
                 .collect(Collectors.toList());
 
         String oranges = products.values().stream()
-                .filter(p -> p.getDescription().equals(criteria.get("descriprion"))
+                .filter(p -> p.getDescription().equals(criteria.get("description"))
                         && p.getPrice() >= (double)criteria.get("price"))
                 .map(Product::getDescription)
                 .collect(Collectors.joining(", "));
